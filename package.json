@@ -22,6 +22,9 @@
     "url": "https://github.com/al3xru/project-lvl1-s69/issues"
   },
   "homepage": "https://github.com/al3xru/project-lvl1-s69#readme",
+  "dependencies": {
+    "readline-sync": "*"
+  },
   "devDependencies": {
     "debug": "*",
     "babel-cli": "*",
