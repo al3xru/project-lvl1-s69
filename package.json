@@ -1,0 +1,38 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "description": "My first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/al3xru/project-lvl1-s69.git"
+  },
+  "author": "Al3x.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/al3xru/project-lvl1-s69/issues"
+  },
+  "homepage": "https://github.com/al3xru/project-lvl1-s69#readme",
+  "devDependencies": {
+    "debug": "*",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-eslint": "*",
+    "babel-plugin-syntax-flow": "*",
+    "babel-plugin-transform-flow-strip-types": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*",
+    "flow-bin": "^0.37",
+    "flow-typed": "*",
+    "jest": "*"
+  }
+}
