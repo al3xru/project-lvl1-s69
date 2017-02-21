@@ -1,0 +1,6 @@
+
+.idea/inspectionProfiles/
+.idea/workspace.xml
+.idea/
+/node_modules/
+*.log
