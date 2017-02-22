@@ -9,13 +9,23 @@ const getRandom = (min, max) => Math.floor((Math.random() * (max - min)) + 1 + m
 // функция задает вопрос
 const askQuestion = () => readlineSync.question('Your answer: ');
 
+//  функция спрашивает число
+const askQuestionInt = () => readlineSync.questionInt('Your answer: ');
+
 //  привествует пользователя
 const helloUser = () => console.log('Welcome to the Brain Games!');
 
 // объясняем суть игры
-const gamePoint = (message) => {
-  return console.log(message);
-}
+const gamePoint = message => console.log(message);
 
-export { getRandom, askQuestion, helloUser, gamePoint, askMe };
+const expression = (first, second, action) => {
+  switch (action) {
+    case '*': return first * second;
+    case '-': return first - second;
+    case '+': return first + second;
+    default: return 0;
+  }
+};
+
+export { getRandom, askQuestion, helloUser, gamePoint, askMe, expression, askQuestionInt };
 

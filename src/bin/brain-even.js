@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import * as lib from './lib.js';
+import * as lib from './lib';
 
 lib.helloUser();
 lib.gamePoint('Answer "yes" if number odd otherwise answer "no".\n');
