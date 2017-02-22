@@ -1,24 +1,15 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import askMe from '..';
+import * as lib from './lib.js';
 
-// функция по возврату случайного целого числа в заданном диапазоне
-const getRandom = (min, max) => Math.floor((Math.random() * (max - min)) + 1 + min);
-
-// функция задает вопрос
-const askQuestion = () => readlineSync.question('Your answer: ');
-
-
-console.log('Welcome to the Brain Games!');
-console.log('Answer "yes" if number odd otherwise answer "no".\n');
-
-const name = askMe();
+lib.helloUser();
+lib.gamePoint('Answer "yes" if number odd otherwise answer "no".\n');
+const name = lib.askMe();
 
 // данный цикл задает вопросы
 for (let i = 0; i < 3; i += 1) {
-  const question = getRandom(1, 99);
+  const question = lib.getRandom(1, 99);
   console.log(`Question: ${question}`);
-  const answer = askQuestion();
+  const answer = lib.askQuestion();
   if (question % 2 === 0 && answer === 'yes') console.log('Correct!');
   if ((question % 2 !== 0 && answer === 'no')) console.log('Correct!');
   if (question % 2 === 0 && answer === 'no') {
