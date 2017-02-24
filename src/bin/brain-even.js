@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import startGame from './../brain-even';
+import startGame from './../flow';
 
 //  запускаем игру калькулятор с количеством шагов 3.
-startGame();
+startGame('even', 3);

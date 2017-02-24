@@ -10,7 +10,7 @@ const expression = (first, second, action) => {
   }
 };
 
-const brainCalc = (name, i) => {
+export const brainCalc = (name, i) => {
   const question1 = lib.getRandom(1, 99);
   const question2 = lib.getRandom(1, 99);
   let exp = '+';
@@ -37,21 +37,4 @@ const brainCalc = (name, i) => {
   return 1;
 };
 
-const iteration = (total, name) => {
-  if (total === 0) {
-    return lib.win(name);
-  }
-  if (total > 0) {
-    if (brainCalc(name, total) === 1) iteration(total - 1, name);
-  }
-  return 0;
-};
-
-const startGame = () => {
-  lib.helloUser();
-  lib.gamePoint('What is the result of the expression?\n');
-  const name = lib.askMe();
-  iteration(3, name);
-};
-
-export default startGame;
+export const showRules = () => console.log('What is the result of the expression?\n');
