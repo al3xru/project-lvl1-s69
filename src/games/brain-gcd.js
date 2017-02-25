@@ -1,4 +1,4 @@
-import * as lib from './lib';
+import * as lib from './../lib';
 
 export const nod = (a, b) => {
   let a1 = Math.abs(a);

@@ -1,4 +1,4 @@
-import * as lib from './lib';
+import * as lib from './../lib';
 
 // Выполнение выражения
 const expression = (first, second, action) => {
