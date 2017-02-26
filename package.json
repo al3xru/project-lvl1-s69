@@ -1,12 +1,13 @@
 {
   "name": "brain-games-al3xru",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "My first project",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-balance": "dist/bin/brain-balance.js"
   },
   "scripts": {
     "test": "jest",
