@@ -20,3 +20,17 @@ export const gamePoint = message => console.log(message);
 
 // поздравляем с выигрышем
 export const win = name => console.log(`Congratulations, ${name}!`);
+
+// функция вычисляет НОД
+export const nod = (a, b) => {
+  let a1 = Math.abs(a);
+  let b1 = Math.abs(b);
+  while (a1 && b1) {
+    if (a1 >= b1) {
+      a1 %= b1;
+    } else {
+      b1 %= a1;
+    }
+  }
+  return a1 || b1;
+};
