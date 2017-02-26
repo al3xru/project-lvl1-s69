@@ -1,40 +1,37 @@
-import * as lib from './../lib';
+import { cons } from 'hexlet-pairs';
+import { getRandom } from './../lib';
+import startGame from './../flow';
 
-// Выполнение выражения
-const expression = (first, second, action) => {
-  switch (action) {
-    case '*': return first * second;
-    case '-': return first - second;
-    case '+': return first + second;
-    default: return 0;
-  }
-};
 
-export const brainCalc = (name, i) => {
-  const question1 = lib.getRandom(1, 99);
-  const question2 = lib.getRandom(1, 99);
-  let exp = '+';
+// объясняем правила игры
+const gameRules = 'What is the result of the expression?\n';
 
-  switch (i) {
-    case 3:
-      exp = '+';
+// создаем пару вопроса и ответа для передачи во флоу
+const makeQuestionAnswer = () => {
+  const num1 = getRandom(0, 100);
+  const num2 = getRandom(0, 100);
+  const operator = getRandom(0, 3);
+  let answer = 0;
+  let question = '';
+  switch (operator) {
+    case 1:
+      question = `${num1} + ${num2}`;
+      answer = num1 + num2;
       break;
     case 2:
-      exp = '-';
+      question = `${num1} - ${num2}`;
+      answer = num1 - num2;
+      break;
+    case 3:
+      question = `${num1} * ${num2}`;
+      answer = num1 * num2;
       break;
     default:
-      exp = '*';
+      question = 'no question';
+      answer = 0;
+      break;
   }
-
-  console.log(`Question: ${question1} ${exp} ${question2}`);
-  const answer = lib.askQuestionInt();
-  const result = expression(question1, question2, exp);
-  if (answer === result) console.log('Correct!');
-  else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\n Let's try again, ${name}!`);
-    return 0;
-  }
-  return 1;
+  return cons(question, String(answer));
 };
 
-export const showRules = () => console.log('What is the result of the expression?\n');
+export default () => startGame(gameRules, makeQuestionAnswer);
