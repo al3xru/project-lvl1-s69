@@ -11,7 +11,7 @@ const makeQuestionAnswer = () => {
   const question = getRandom(0, 100);
   // провереяем число на простоту
   const answer = (n) => {
-    if(n <= 1) return 'no';
+    if (n <= 1) return 'no';
     for (let i = 2; i < Math.sqrt(n); i += 1) {
       if (n % i === 0) return 'no';
     }
