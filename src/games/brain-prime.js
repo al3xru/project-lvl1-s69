@@ -10,7 +10,7 @@ const gameRules = 'Answer "yes" if number is simple.';
 const makeQuestionAnswer = () => {
   const question = getRandom(0, 100);
   const answer = (expression) => {
-    if (expression % 2 === 0 && expression > 1) return 'no';
+    if (expression % 2 === 0 || expression === 1) return 'no';
     return 'yes';
   };
   return cons(question, answer(question));
