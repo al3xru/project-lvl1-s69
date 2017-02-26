@@ -4,15 +4,20 @@ import startGame from './../flow';
 
 
 // объясняем правила игры
-const gameRules = 'Answer "yes" if number is simple.';
+const gameRules = 'Answer "yes" if number is prime.\n';
 
 // создаем пару вопроса и ответа для передачи во флоу
 const makeQuestionAnswer = () => {
   const question = getRandom(0, 100);
-  const answer = (expression) => {
-    if (expression % 2 === 0 || expression === 1) return 'no';
+  // провереяем число на простоту
+  const answer = (n) => {
+    if(n <= 1) return 'no';
+    for (let i = 2; i < Math.sqrt(n); i += 1) {
+      if (n % i === 0) return 'no';
+    }
     return 'yes';
   };
+  // возвращаем вопрос и ответ
   return cons(question, answer(question));
 };
 
