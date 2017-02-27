@@ -4,7 +4,7 @@ import { helloUser, askMe, win, askQuestion } from './lib';
 const startGame = (game, questionAnswer) => {
   // приветствуем юзера и объясняем игру
   helloUser();
-  console.log(`${game}`);
+  console.log(`${game}\n`);
   // спрашиваем имя
   const name = askMe();
   // кол-во вопросов

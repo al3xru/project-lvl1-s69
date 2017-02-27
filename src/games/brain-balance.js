@@ -4,7 +4,7 @@ import startGame from './../flow';
 
 
 // объясняем правила игры
-const gameRules = 'Balance the given number..\n';
+const gameRules = 'Balance the given number.';
 
 // создаем пару вопроса и ответа для передачи во флоу
 const makeQuestionAnswer = () => {

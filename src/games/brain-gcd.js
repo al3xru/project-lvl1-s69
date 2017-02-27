@@ -4,7 +4,7 @@ import startGame from './../flow';
 
 
 // объясняем правила игры
-const gameRules = 'Find the greatest common divisor of given numbers.\n';
+const gameRules = 'Find the greatest common divisor of given numbers.';
 
 // создаем пару вопроса и ответа для передачи во флоу
 const makeQuestionAnswer = () => {

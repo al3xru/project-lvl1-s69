@@ -4,7 +4,7 @@ import startGame from './../flow';
 
 
 // объясняем правила игры
-const gameRules = 'Answer "yes" if number is prime.\n';
+const gameRules = 'Answer "yes" if number is prime.';
 
 // создаем пару вопроса и ответа для передачи во флоу
 const makeQuestionAnswer = () => {

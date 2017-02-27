@@ -4,7 +4,7 @@ import startGame from './../flow';
 
 
 // объясняем правила игры
-const gameRules = 'What is the result of the expression?\n';
+const gameRules = 'What is the result of the expression?';
 
 // создаем пару вопроса и ответа для передачи во флоу
 const makeQuestionAnswer = () => {
